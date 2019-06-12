@@ -24,3 +24,12 @@
     display:flex;
     justify-content: space-between;
 }
+.button{
+    background-color:lemonchiffon;
+    padding:.5rem 1rem;
+    height:auto;
+    border:gray outset 3px;
+}
+.button:hover{
+    border:gray inset 3px;
+}

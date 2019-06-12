@@ -3,6 +3,8 @@ import './App.css';
 import FriendList from './component/FriendList'
 import axios from 'axios'
 import FriendForm from './component/FriendForm'
+import Navigation from './component/Navigation'
+import {Route} from 'react-router-dom'
 
 class App extends React.Component{
   state={
@@ -59,23 +61,26 @@ class App extends React.Component{
       ...who,
       editing:who.id
     })
-    
   }
 
   formChange=e=>{
     this.setState({[e.target.name]:e.target.value})
-    
   }
 
   render(){
     return (
       <div className="App">
-        <FriendForm c={this.C} editing={this.state.editing} 
-                    U={this.U} clear={this.clear} 
-                    name={this.state.name} email={this.state.email}
-                    age={this.state.age} formChange={this.formChange}
-        />
-        <FriendList friends={this.state.friends} kill={this.D} update={this.update}/>
+        <Navigation/>
+        <Route path="/add" render={()=>(
+          <FriendForm c={this.C} editing={this.state.editing} 
+                      U={this.U} clear={this.clear} 
+                      name={this.state.name} email={this.state.email}
+                      age={this.state.age} formChange={this.formChange}
+          />
+        )}/>
+        <Route path="/" exact render={()=>(
+          <FriendList friends={this.state.friends} kill={this.D} update={this.update}/>
+        )}/>
       </div>
     );
   }

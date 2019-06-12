@@ -11,7 +11,12 @@ export default function(props){
                     <li className="none">Age: {props.friend.age}</li>
                     <li className="none">Email: {props.friend.email}</li>
                 </ul>
-                <button onClick={props.U}>Update Friend</button>
+                <button 
+                    className="button" 
+                    onClick={props.U}
+                >
+                    Update Friend
+                </button>
             </section>
         </section>
     )

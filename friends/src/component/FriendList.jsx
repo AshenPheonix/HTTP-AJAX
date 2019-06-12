@@ -7,7 +7,11 @@ export default class FriendList extends Component {
             return (
                 <div>
                     {this.props.friends.map(friend=>(
-                        <Friend friend={friend} key={friend.id} kill={this.props.kill}/>
+                        <Friend friend={friend} 
+                            key={friend.id} 
+                            kill={this.props.kill}
+                            U={()=>this.props.update(friend)}
+                            />
                     ))}
                 </div>
             )

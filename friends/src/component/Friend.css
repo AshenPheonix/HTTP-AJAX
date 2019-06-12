@@ -6,6 +6,17 @@
     text-align: left;
     border:lightgray 2px outset;
     box-shadow:2px 2px 2px black;
-    margin:.5rem;
+    margin:.5rem auto;
     padding:1rem;
+    max-width: 600px;
+    position: relative;
+}
+.kill{
+    display:inline-block;
+    right:1.25rem;
+    top:1rem;
+    position: absolute;
+    border: 2px gray outset;
+    padding:.5rem;
+    cursor:pointer;
 }

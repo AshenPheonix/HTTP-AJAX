@@ -1,0 +1,11 @@
+.none{
+    list-style-type: none;
+}
+
+.friend{
+    text-align: left;
+    border:lightgray 2px outset;
+    box-shadow:2px 2px 2px black;
+    margin:.5rem;
+    padding:1rem;
+}

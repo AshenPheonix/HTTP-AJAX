@@ -1,0 +1,20 @@
+nav{
+    display:flex;
+    justify-content: center;
+}
+nav section{
+    margin:.5rem 0;
+    background-color: lightgreen;
+    box-shadow: 4px -4px 4px inset white;
+    border:1px black inset;
+    padding:1rem;
+}
+nav section.right{
+    box-shadow: -4px -4px 4px inset white;
+}
+nav section:hover{
+    box-shadow: inset white 4px 4px 4px;
+}
+nav section.right:hover{
+    box-shadow: inset white -4px 4px 4px;
+}
